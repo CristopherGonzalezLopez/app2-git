@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>segunda aplicacion</title>
+
+ <!--grupo CSS-->
+ <link rel="stylesheet" href="css/tema-app1.min.css"/>
+ <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+ <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+ <!--grupo JavaScript-->
+ <script src="js/jquery-1.11.2.min.js"></script>
+ <script src="js/jquery.mobile-1.4.5.min.js"></script>
+ <script src="js/acciones.js"></script>
+ <script src="phonegap.js"></script>
+ <script type="text/javascript">
+ 
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+ </script>
+ 
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+ </script>
+</head>
+ 
+<body onLoad="MM_preloadImages('imagenes/telefonou.jpg','imagenes/celulares.jpg','imagenes/celular.jpg','imagenes/definicion4.jpg','imagenes/historia2.jpg')">
+ 
+  <div data-role="page" id="principal" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-add-back-btn-text="Regresar"  data-back-btn-theme="b">
+     <h1> TELEFONIA CELULAR </h1>
+    </div>
+    <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> Telefono celular</h1>
+         <div>
+           <p> Se muestran celulares</p>
+           <br>
+          </div>
+          <div>: 
+          <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','imagenes/definicion4.jpg',1)"><img src="imagenes/definicion2.jpg" width="170" height="297" id="Image7"></a></div>
+        </div>
+       </div>
+       <div>
+        <ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+           <li class="ui-first-child ui-last-child">
+              <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                 <h2>DEFINICION</h2>
+                 <p>Muestra dos definiciones </p>
+              </a>
+             </li>
+             <li class="ui-first-child ui-last-child">
+                 <a href="#pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                  <h2>HISTORIA</h2>
+                  <p> Se muestra la historia de los celulares </p>
+                 </a> 
+                </li>
+                <li class="ui-first-child ui-last-child">
+                    <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                      <h2> CLASIFICACION DE GAMAS</h2>
+                      <p>Muestra las gamas</p>
+                    </a>
+                 </li>
+                 <li class="ui-first-child ui-last-child">
+                    <a href="#Pagina4" class=" ui-btn ui-btn-icon-right ui-icon-carat-r">
+                       <h2>COMPAÑIAS</h2>
+                       <p> Muestra algunas Compañias</p>
+                    </a>
+                  </li>
+                  <li class="ui-first-child ui-last-child">
+                    <a href="#Pagina5" class=" ui-btn ui-btn-icon-right ui-icon-carat-r">
+                       <h2>TELEFONOS DEL FUTURO</h2>
+                       <p> Muestra algunos celulares avanzados</p>
+                    </a>
+                  </li>
+                   </ul>
+                </div>
+               <div data-role="footer" align="center" data-theme="b" data-position="fixed">
+                  <div>
+                    <img src="imagenes/logo.png" width="46" height="46">
+                    </div>
+                    <div>
+                      <h4> Aplicacion Dos </h4>
+                      <h4> Gonzalez Lopez Cristopher</h4>
+                     </div>
+                    </div>
+                   </div>
+                   <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="b">
+                    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+                       <h1>DEFINICION </h1>
+                    </div>
+                         <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> Definicion 1</h1>
+         <div>
+           <p>Se conoce como celular al dispositivo inalámbrico electrónico que está preparado para tener acceso a la telefonía celular, también conocida como móvil.En tanto, la denominación celular tiene su razón de ser en que cada una de las antenas repetidoras, que forman parte de la red, son células.El rasgo diferencial que ostenta el teléfono celular por sobre los otros tipos de teléfono es su fácil portación, en la cartera, en el bolso, incluso en los bolsillos del pantalón o pollera, los seres humanos que formamos parte de esta comunidad conectada celularmente podemos llevar con nosotros y a cualquier lado este tipo de teléfono porque no pesan casi nada.</p>
+           <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','imagenes/celulares.jpg',1)"><img src="imagenes/telefonou.jpg" width="190" height="266" id="Image13"></a><br>
+          </div>
+          <div></div>
+                      </div>
+                            <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> Definicion 2 </h1>
+       <div>
+          <p>El teléfono móvil o teléfono celular es un aparato indispensable en la actualidad; sin embargo su popularización ha sido un fenómeno muy reciente. En un principio el teléfono móvil solo podía ser usado en vehículos por su tamaño, reduciéndose posteriormente a una unidad portátil, y finalmente al tamaño de bolsillo que utilizamos hoy. Pero el teléfono en sí es solo una pequeña parte de un sistema de telefonía mayor.
+El sistema celular fue creado para satisfacer la demanda de comunicación móvil dentro de un espectro de radiofrecuencia limitado. Esta limitación es el factor original que motivó y sigue motivando el desarrollo del teléfono móvil, frente a otros de los varios factores como la duración de la batería o el tamaño del aparato. El sistema debe acomodar miles de usuarios dentro de un espectro reducido para transmitir cada vez más información. La transmisión de voz, pero actualmente también la demanda de imágenes, vídeos y acceso a internet, continúan aumentando los requisitos del sistema.</p>
+           <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','imagenes/celular.jpg',1)"><img src="imagenes/definicion1.jpg" width="205" height="147" id="Image4"></a><br>
+        </div>
+       </div>
+       <div data-role="content" align="center">
+        <div>
+         <p> </p>
+        </div>
+       </div>
+                       <div data-role="footer" data-theme="b" data-position="fixed">
+                        <h4>Aplicacion Dos, GLC </h4>
+                        </div>
+                        </div>
+                       </div>
+                      </div>
+                      
+ <div data-role="page" id="pagina2" data-add-back-btn="true" data-theme="b">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+                           <h1>HISTORIA DEL CELULAR </h1>
+                           </div>
+ <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> PRIMER TELEFONO Y AVANCES </h1>
+         <div>
+           <p>El teléfono pesaba cerca de 1 kg, tenía un tamaño de 33.02 x 4,445 x 8,89 centímetros y su batería duraba una hora de comunicación o una jornada laboral (ocho horas) en espera, con pantalla led.Ameritech Mobile Communications, LLC fue la primera empresa en los EE.UU. en proporcionar servicio de telefonía móvil al público general.Evolución del número de usuarios de telefonía móvil según el estándar que emplean.En la década de 1990 nace la segunda generación, que utiliza sistemas como GSM, IS-136, iDEN e IS-95. Las frecuencias utilizadas en Europa fueron de 900 y 1800 MHz.El desarrollo de esta generación tiene como piedra angular la digitalización de las comunicaciones. Las comunicaciones digitales ofrecen una mejor calidad de voz que las analógicas, además se aumenta el nivel de seguridad y se simplifica la fabricación del Terminal (con la reducción de costos que ello conlleva).</p>
+           <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image55','','imagenes/historia2.jpg',1)"><img src="imagenes/historia1.jpg" width="320" height="158" id="Image55"></a><br>
+          </div>
+          <div></div>
+          </div>
+                
+                  <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> CELULARES QUE CAUSARON UN INPACTO GRANDE EN LA NOVEDAD </h1>
+       <div>
+           <p>Motorola ya como parte de Google y sus teléfonos de gama media-alta a precios muy accesibles y con diseños muy atractivos comienzan a invadir el Mercado, no sólo con sus series E, G y G Forte, sino con el Moto X </p>
+           <P>El 2015 quedó marcado por el nuevo celular de Apple el iPhone 6 y su versión 6 Plus que acapararon toda la atención al ser uno de los mejores equipos en toda la historia de los celulares. </P>
+           <br>
+          </div>
+          <div> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','imagenes/moto.jpg',1)"><img src="imagenes/phone.jpg" width="200" height="275" id="Image9"></a>
+          </div>
+          </div>
+           <div data-role="footer" data-theme="b" data-position="fixed">
+                        <h4>Aplicacion Dos, GLC</h4>
+                        </div>
+                        </div>
+                       </div>
+                      </div>
+        
+                           
+                           
+                          <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="b">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+                           <h1>CLASIFICACION DE GAMAS</h1>
+                         </div>
+                                <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> GAMA BAJA  </h1>
+         <div>
+           <p> El nuevo terminal de Sony llega luciendo 5,5 pulgadas de pantalla LCD con resolución HD. 1280x720 píxeles que ofrecen 267 píxeles por pulgada de densidad y que se protegen con un cristal 2.5D para ofrecer bordes curvados en el frontal, algo que también ocurre con la parte trasera, aunque en este caso gracias a la carcasa de color del dispositivo, aparentemente construida en plástico.
+El cerebro elegido para el Xperia L1 es un modelo desconocido de MediaTek, uno del que sólo sabemos que tiene cuatro núcleos y que corre a 1,45GHz. El chip en cuestión se apoya en 2GB de RAM y en 16GB de almacenamiento interno, una memoria que podremos ampliar gracias a una bandeja para microSD que nos dejará colocar una tarjeta de 256GB de capacidad.
+</p>
+           <br>
+          </div>
+          <div> 
+           <img src="imagenes/xpera.jpg" width="200" height="250">
+          </div>
+                                </div>
+     </div>
+                
+                <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> GAMA MEDIA </h1>
+       <div>
+           <p>Moto Z Play es el reflejo del Moto Z en una versión con especificaciones un poco más básicas, pero con la misma experiencia de uso. En la parte de atrás tiene unos pines magnéticos compatibles con los Moto Mods. 
+Los Moto Mods son accesorios creados por diferentes fabricantes, pero homologados bajo una misma dinámica de instalación, pues son reconocidos por el teléfono inmediatamente después de ponerlos en su parte trasera. Es así que puedes mejorar el zoom de la cámara con un lente 10x creado por Hasselblad y la potencia de sonido con una bocina de JBL, así como extender la duración de la batería con 20 horas extras con el accesorio de Incipio o proyectar videos de hasta 70 pulgadas sobre una pared con el Insta-Share Projector. 
+Y aun cuando no quisieras invertir en alguno de los Moto Mods (que se compran por separado), el teléfono por sí solo tiene una muy buena pantalla, batería y procesador, además de sensor de huella digital y tecnología de carga rápida. </P>
+           <br>
+          </div>
+          <div>
+          <img src="imagenes/gamamedia.jpg" width="200" height="250">
+          </div>
+                      </div>
+                      </div>
+                         
+                         
+                <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> GAMA ALTA </h1>
+       <div>
+           <p>Galaxy S7 tiene una resolución QHD y un brilo de 500 nits. Se ve bien a plena luz del día, con colores muy vivos, y se encuentra entre las mejores pantallas del mercado. Además la temperatura se sitúa en torno a los 6800 ºK, por lo que los blancos se verán como blancos. El procesador es un Exynos 8890, con un gran rendimiento, de lo mejor que se puede encontrar en 2016 en un teléfono, y una GPU de la gráfica Mali T880, con 4 GB de RAM LPDDR4.
+El almacenamiento de tipo UFS 2.0 del teléfono es ultrarrápido, con unas velocidades cercanas a los 220 MB/s de lectura secuencial y 60 MB/s de escritura secuencial. Samsung también ha mejorado la capa de personalización de Android, de la que saca provecho con el lector de huellas dactilares frontal —la ubicación idónea—.
+La cámara de 12 Mpx tiene una excelente calidad, y es un apartado en el que los Galaxy de gama alta destacan por sí mismos. Samsung cuenta con buenos algoritmos de posprocesado, que se ve reflejado en las imágenes que capturan las cámaras y que no defraudarán a nadie. En el apartado de vídeo, puede grabar a cámara lenta de hasta 240 FPS, y vídeo a 4K y 30 FPS.</P>
+           <br>
+          </div>
+          <div>
+          <img src="imagenes/gamaalta.jpg" width="200" height="250">
+          </div>
+          </div>
+           <div data-role="footer" data-theme="b" data-position="fixed">
+                        <h4>Aplicacion Dos , GLC</h4>
+                        </div>
+                        </div>
+                       </div>
+                       </div>
+               
+                           
+                            <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="b">
+                         <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+                           <h1>COMPAÑIAS DE TELEFONO CELULAR EN MEXICO</h1>
+                         </div>
+                         
+                                              <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> UNEFON  </h1>
+         <div>
+          <div>
+           <p>SE MUESTRA EL LOGOTIPO</P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/unefon.png" width="200" height="250">
+          <address>
+           vista la pagina oficial de unefon <a href="https://www.unefon.com.mx/">clikc</a>
+           </address>
+           </div>
+           </div>
+           </div>
+           </div>
+                                                    <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> MOVISTAR</h1>
+         <div>
+          <div>
+           <p>SE MUESTRA EL LOGOTIPO </P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/movistar.png" width="200" height="250">
+          <address>
+           vista la pagina oficial de movistar <a href="http://www.movistar.com.mx/">clikc</a>
+           </address>
+           </div>
+           </div>
+           </div>
+           </div>
+           
+                                                      <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> TELCEL</h1>
+         <div>
+          <div>
+           <p>SE MUESTRA EL LOGOTIPO </P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/telcel.png" width="200" height="250">
+           <address>
+           vista la pagina oficial de telcel <a href="http://www.telcel.com/">clikc</a>
+           </address>
+           </div>
+           </div>
+           </div>
+           </div>
+           
+                                                     <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> AT&T </h1>
+         <div>
+          <div>
+           <p>SE MUESTRA EL LOGOTIPO </P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/att.jpg" width="200" height="250">
+          <address>
+           vista la pagina oficial de AT&T <a href="https://www.att.com.mx/">clikc</a>
+           </address>
+           </div>
+           </div>
+           </div>
+           </div>
+           
+               <div data-role="footer" data-theme="b" data-position="fixed">
+                        <h4>Aplicacion Dos, GLC</h4>
+                        </div>
+                        </div>
+                       </div>
+                       </div>      
+                           
+           <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="b">
+                         <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+                                <h1>TELEFONOS DEL FUTURO</h1>
+                         </div>
+                         
+                                              <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> SAMSUNG GALAXY 6 </h1>
+         <div>
+          <div>
+           <p>La penúltima maravilla tecnológica de Samsung se llama Galaxy 6 y viene acompañado de otro modelo denominado S6 Edge que se caracteriza por sus dos pantallas curvas en los laterales.
+            El Galaxy S6 salió a la venta allá por el mes de marzo de 2015 y ahora mismo sigue siendo uno de los teléfonos móviles punteros que hay en el mercado. Destacan, entre muchas otras cosas,            su diseño y acabados de auténtico lujo en metal y aluminio, sus cámara delantera de 5 Megapixels y trasera de 16.</P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/tfuturo1.jpg" width="200" height="250">
+           </div>
+           </div>
+           </div>
+           </div>
+                                                    <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1>LG Z</h1>
+         <div>
+          <div>
+           <p>Una imagen vale más que mil palabras. El nuevo smartphone de LG, el LG Z,destaca por su flexibilidad y nunca mejor dicho. La pantalla de este dispositivo va  a ser cóncava, parecida a la la de una pantalla OLED curva de TV. También será Full HD, la misma que incorpora el también anunciado LG G2. </P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/tfuturo4.jpg" width="200" height="250">
+           </div>
+           </div>
+           </div>
+           </div>
+           
+                                                      <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1>NEXUS 5</h1>
+         <div>
+          <div>
+           <p>El nuevo teléfono de Google lleva por nombre Nexus 5. Un smartphone que por lo visto cuenta ya con la nueva actualización del sistema Android, el nuevo Android 4.4 KitKat. Tiene pantalla de cinco pulgadas con resolución Full HD, con una cámara de ocho megapíxeles.</P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/tfuturo2.jpeg" width="200" height="250">
+           </div>
+           </div>
+           </div>
+           </div>
+           
+                                                     <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+       <h1> MOTO G4</h1>
+         <div>
+          <div>
+           <p> El Motorola Moto G4 es la cuarta generación del exitoso Moto G, esta vez con grandes mejoras en sus características respecto a las generaciones anteriores. El Moto G4 cuenta con una pantalla 1080p de 5.5 pulgadas, procesador octa-core Snapdragon 617, 2GB de RAM, 16GB de almacenamiento interno expandible, cámara principal de 13 megapixels con flash LED, cámara frontal de 5 megapixels, protección contra el agua, y corre Android 6.0.1 Marshmallow.</P>
+           <br>
+          </div>
+           <div>
+          <img src="imagenes/motog4.jpg" width="200" height="250">
+           </div>
+           </div>
+           </div>
+           </div>
+           
+               <div data-role="footer" data-theme="b" data-position="fixed">
+                        <h4>Aplicacion Dos, GLC</h4>
+                        </div>
+                        </div>
+                       </div>
+                       </div>   
+                       
+ </div> 
+</head>
+
+</body>
+</html>
